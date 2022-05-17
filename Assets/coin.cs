@@ -5,6 +5,8 @@ using UnityEngine;
 public class coin : MonoBehaviour
 {
     public Transform transform;
+    //public Rigidbody rigidbody;
+    public GameObject otherGameObject;
 
     private void OnTriggerEnter(Collider other)
     {
@@ -15,15 +17,16 @@ public class coin : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        transform = GetComponent<Transform>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(transform.position.y < -5)
+        if (transform.position.y < -5 && gameObject.tag=="key")
         {
             Destroy(gameObject);
+            Destroy(otherGameObject);
         }
     }
 }
