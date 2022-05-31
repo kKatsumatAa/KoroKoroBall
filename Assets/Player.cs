@@ -19,7 +19,7 @@ namespace PLAYER
         // Update is called once per frame
         void Update()
         {
-            if (transform.position.y < -5)
+            if (transform.position.y < -10)
             {
                 Debug.Log("GameOver!!!");
                 transform.position = new Vector3(-23.7f, 2.5f, -28.4f);

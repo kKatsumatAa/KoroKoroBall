@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
@@ -17,7 +18,7 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (transform.position.y >= 0)
+        if (transform.position.y >= 0 && SceneManager.GetActiveScene().name!= "Sample3")
         {
             if (Input.GetKey(KeyCode.UpArrow))
             {
