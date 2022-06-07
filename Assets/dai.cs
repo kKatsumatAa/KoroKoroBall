@@ -14,6 +14,7 @@ public class dai : MonoBehaviour
         {
             playerRigid = other.GetComponent<Rigidbody>();
             playerRigid.angularVelocity = Vector3.zero;
+            playerRigid.velocity = Vector3.zero;
             playerRigid.AddForce(new Vector3(-300, 100, 0));
         }
     }
